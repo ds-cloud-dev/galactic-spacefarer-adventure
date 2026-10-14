@@ -1,0 +1,89 @@
+managed implementation in class ZDS1910_BP_SPACEFARER unique;
+strict ( 2 );
+
+define behavior for ZDS1910_I_SPACEFARER alias Spacefarer
+persistent table zds1910_t_sfarer
+lock master
+authorization master ( global )
+etag master ChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly, numbering : managed ) SpacefarerId;
+
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  ChangedBy,
+  ChangedAt;
+
+  field ( mandatory )
+  Name,
+  NavigationSkill,
+  Reputation,
+  OriginPlanet,
+  SpacesuitColor,
+  Credits;
+
+  association _Collection { create; }
+
+  validation validateSpacefarer on save
+  {
+    create;
+    update;
+  }
+
+  validation validateDeletion on save
+  {
+    delete;
+  }
+
+  mapping for zds1910_t_sfarer
+    {
+      SpacefarerId    = spacefarer_id;
+      Name            = name;
+      NavigationSkill = navigation_skill;
+      Reputation      = reputation;
+      OriginPlanet    = origin_planet;
+      SpacesuitColor  = spacesuit_color;
+      Credits         = credits;
+      CreatedBy       = created_by;
+      CreatedAt       = created_at;
+      ChangedBy       = changed_by;
+      ChangedAt       = changed_at;
+    }
+}
+
+define behavior for ZDS1910_I_COLLECTION alias Collection
+persistent table zds1910_t_scoll
+lock dependent by _Spacefarer
+authorization dependent by _Spacefarer
+etag master ChangedAt
+{
+  delete;
+
+  field ( readonly )
+  SpacefarerId,
+  CreatedBy,
+  CreatedAt,
+  ChangedBy,
+  ChangedAt;
+
+  association _Spacefarer;
+
+  validation validateDeletion on save
+  {
+    delete;
+  }
+
+  mapping for zds1910_t_scoll
+    {
+      SpacefarerId = spacefarer_id;
+      CreatedBy    = created_by;
+      CreatedAt    = created_at;
+      ChangedBy    = changed_by;
+      ChangedAt    = changed_at;
+    }
+}
