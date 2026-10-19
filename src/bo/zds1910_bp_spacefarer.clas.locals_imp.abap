@@ -84,7 +84,9 @@ CLASS lhc_Spacefarer IMPLEMENTATION.
 
     ENDIF.
 
-*    "Auth check below could be work in case solution based on business roles
+*    "Kept for a possible switch to business-role-based authorization.
+*    "The required role assignment was not available in the BTP trial setup,
+*    "so the application currently checks permissions using its own table.
 *    IF requested_authorizations-%create = if_abap_behv=>mk-on.
 *
 *      AUTHORITY-CHECK OBJECT 'ZDS1910_AO'
