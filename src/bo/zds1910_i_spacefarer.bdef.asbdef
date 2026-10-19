@@ -11,6 +11,14 @@ etag master ChangedAt
   update;
   delete;
 
+  action ( authorization : update, lock : none )
+    Buy parameter ZDS1910_A_BUY result [1] $self;
+
+  side effects
+  {
+    action Buy affects $self, entity _Collection, entity _Stardust;
+  }
+
   field ( readonly, numbering : managed ) SpacefarerId;
 
   field ( readonly )
@@ -27,7 +35,10 @@ etag master ChangedAt
   SpacesuitColor,
   Credits;
 
-  association _Collection { create; }
+  association _Collection
+  {
+    create ( authorization : update );
+  }
 
   validation validateSpacefarer on save
   {
@@ -64,7 +75,26 @@ etag master ChangedAt
 {
   delete;
 
+  action ( authorization : update, lock : none )
+  Buy parameter ZDS1910_A_BUY result [1] $self;
+
+  action ( authorization : update, lock : none )
+  Sell parameter ZDS1910_A_SELL result [1] $self { default function GetDefaultsForSell; }
+
+  action ( authorization : update, lock : none )
+  Exchange parameter ZDS1910_A_EXCHANGE result [1] $self { default function GetDefaultsForExchange; }
+
+
+  side effects
+  {
+    action Buy affects $self;
+    action Sell affects $self, entity _Spacefarer, entity _Stardust;
+    action Exchange affects $self, entity _Spacefarer, entity _Stardust;
+  }
+
   field ( readonly )
+  StardustCount,
+  CollectionValue,
   SpacefarerId,
   CreatedBy,
   CreatedAt,

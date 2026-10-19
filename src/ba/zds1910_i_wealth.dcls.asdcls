@@ -1,0 +1,7 @@
+@EndUserText.label: 'Wealth Read Authorization'
+@MappingRole: true
+define role ZDS1910_I_WEALTH
+{
+  grant select on ZDS1910_I_WEALTH
+    where _ReadAuthorization.Activity = '03';
+}

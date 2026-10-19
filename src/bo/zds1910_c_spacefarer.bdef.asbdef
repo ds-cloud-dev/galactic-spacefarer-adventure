@@ -1,0 +1,31 @@
+projection;
+strict ( 2 );
+use side effects;
+
+define behavior for ZDS1910_C_SPACEFARER alias Spacefarer
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Buy external 'BuyStardust';
+
+  use association _Collection;
+}
+
+define behavior for ZDS1910_C_COLLECTION alias Collection
+use etag
+{
+
+  use action Buy;
+
+  use action Sell;
+  use function GetDefaultsForSell;
+
+  use action Exchange;
+  use function GetDefaultsForExchange;
+
+  use association _Spacefarer;
+
+}

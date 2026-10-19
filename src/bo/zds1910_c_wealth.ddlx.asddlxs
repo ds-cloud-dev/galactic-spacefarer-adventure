@@ -1,0 +1,39 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Spacefarer Wealth',
+  typeNamePlural: 'Spacefarer Wealth',
+  title: { type: #STANDARD, value: 'Name' }
+}
+annotate view ZDS1910_C_WEALTH with
+{
+  @UI.facet: [
+    { id: 'WealthDetails',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Wealth Overview',
+      position: 10 }
+  ]
+  @UI.hidden: true
+  SpacefarerId;
+
+  @EndUserText.label: 'Spacefarer'
+  @UI.lineItem: [{ position: 10, importance: #HIGH }]
+  @UI.identification: [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  Name;
+
+  @EndUserText.label: 'Credits'
+  @UI.lineItem: [{ position: 20, importance: #HIGH }]
+  @UI.identification: [{ position: 20 }]
+  Credits;
+
+  @EndUserText.label: 'Collection Value (Credits)'
+  @UI.lineItem: [{ position: 30, importance: #HIGH }]
+  @UI.identification: [{ position: 30 }]
+  CollectionValue;
+
+  @EndUserText.label: 'Total Wealth (Credits)'
+  @UI.lineItem: [{ position: 40, importance: #HIGH }]
+  @UI.identification: [{ position: 40 }]
+  TotalWealth;
+}

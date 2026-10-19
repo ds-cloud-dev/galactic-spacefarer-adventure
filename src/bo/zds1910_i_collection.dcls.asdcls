@@ -1,0 +1,7 @@
+@EndUserText.label: 'Collection Read Authorization'
+@MappingRole: true
+define role ZDS1910_I_COLLECTION
+{
+  grant select on ZDS1910_I_COLLECTION
+    where _ReadAuthorization.Activity = '03';
+}

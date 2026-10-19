@@ -1,0 +1,37 @@
+managed implementation in class ZDS1910_BP_STARDUST unique;
+strict ( 2 );
+
+define behavior for ZDS1910_I_STARDUST alias Stardust
+persistent table zds1910_t_sdust
+lock master
+authorization master ( global )
+etag master ChangedAt
+{
+  update;
+
+  field ( readonly )
+  StardustId,
+  Color,
+  Weight,
+  WeightUnit,
+  StateOfMatter,
+  StardustValue,
+  CreatedBy,
+  CreatedAt,
+  ChangedBy,
+  ChangedAt;
+
+  mapping for zds1910_t_sdust
+    {
+      StardustId        = stardust_id;
+      CollectionOwnerId = collection_owner_id;
+      Color             = color;
+      Weight            = weight;
+      StateOfMatter     = state_of_matter;
+      StardustValue     = value;
+      CreatedBy         = created_by;
+      CreatedAt         = created_at;
+      ChangedBy         = changed_by;
+      ChangedAt         = changed_at;
+    }
+}

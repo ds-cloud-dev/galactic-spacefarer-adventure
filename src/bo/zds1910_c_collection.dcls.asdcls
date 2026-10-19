@@ -1,0 +1,7 @@
+@EndUserText.label: 'Collection Projection Read Authorization'
+@MappingRole: true
+define role ZDS1910_C_COLLECTION
+{
+  grant select on ZDS1910_C_COLLECTION
+    where inheriting conditions from entity ZDS1910_I_COLLECTION;
+}

@@ -1,0 +1,7 @@
+@EndUserText.label: 'Stardust Read Authorization'
+@MappingRole: true
+define role ZDS1910_I_STARDUST
+{
+  grant select on ZDS1910_I_STARDUST
+    where _ReadAuthorization.Activity = '03';
+}

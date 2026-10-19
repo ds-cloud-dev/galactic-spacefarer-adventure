@@ -1,0 +1,95 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: {
+  typeName: 'Spacefarer',
+  typeNamePlural: 'Spacefarers',
+  title: {
+    type: #STANDARD,
+    value: 'Name'
+  },
+  description: {
+    type: #STANDARD,
+    value: 'OriginPlanet'
+  }
+}
+
+annotate entity ZDS1910_C_SPACEFARER with
+{
+  @UI.facet: [
+    {
+      id: 'General',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'General Information',
+      position: 10 },
+    { id: 'CollectionSummary',
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Stardust Collection',
+      position: 20,
+      targetElement: '_Collection',
+      targetQualifier: 'CollectionSummary' },
+    { id: 'SpacefarerStardusts',
+      purpose: #STANDARD,
+      type: #LINEITEM_REFERENCE,
+      label: 'Stardusts',
+      position: 30,
+      targetElement: '_Stardust',
+      targetQualifier: 'CollectionItems' }
+  ]
+
+  @UI.hidden: true
+  SpacefarerId;
+
+  @EndUserText.label: 'Name'
+  @UI.lineItem: [
+    { position: 10, importance: #HIGH },
+    { position: 70, type: #FOR_ACTION, dataAction: 'BuyStardust',
+      label: '🚀 Acquire Stardust', invocationGrouping: #ISOLATED }
+  ]
+  @UI.identification: [
+    { position: 10 },
+    { position: 70, type: #FOR_ACTION, dataAction: 'BuyStardust',
+      label: '🚀 Acquire Stardust' }
+  ]
+  @UI.selectionField: [{ position: 10 }]
+  Name;
+
+  @EndUserText.label: 'Wormhole Navigation Skill'
+  @UI.lineItem: [{ position: 20, importance: #MEDIUM }]
+  @UI.identification: [{ position: 20 }]
+  NavigationSkill;
+
+  @EndUserText.label: 'Reputation'
+  @UI.lineItem: [{ position: 30, importance: #HIGH }]
+  @UI.identification: [{ position: 30 }]
+  Reputation;
+
+  @EndUserText.label: 'Origin Planet'
+  @UI.lineItem: [{ position: 40, importance: #MEDIUM }]
+  @UI.identification: [{ position: 40 }]
+  @UI.selectionField: [{ position: 20 }]
+  OriginPlanet;
+
+  @EndUserText.label: 'Spacesuit Color'
+  @UI.lineItem: [{ position: 50, importance: #LOW }]
+  @UI.identification: [{ position: 50 }]
+  SpacesuitColor;
+
+  @EndUserText.label: 'Credits'
+  @UI.lineItem: [{ position: 60, importance: #HIGH }]
+  @UI.identification: [{ position: 60 }]
+  Credits;
+
+  @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.hidden: true
+  ChangedBy;
+
+  @UI.hidden: true
+  ChangedAt;
+}

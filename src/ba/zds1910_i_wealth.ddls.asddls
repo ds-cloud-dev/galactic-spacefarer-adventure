@@ -4,6 +4,8 @@ define view entity ZDS1910_I_WEALTH
   as select from    zds1910_t_sfarer          as Spacefarer
 
     left outer join ZDS1910_I_COLLECTIONVALUE as CollectionValue on Spacefarer.spacefarer_id = CollectionValue.CollectionOwnerId
+  association [0..1] to ZDS1910_I_USRAUTH as _ReadAuthorization on  _ReadAuthorization.UserName = $session.user
+                                                                and _ReadAuthorization.Activity = '03'
 {
   key Spacefarer.spacefarer_id                as SpacefarerId,
       Spacefarer.name                         as Name,
@@ -13,5 +15,7 @@ define view entity ZDS1910_I_WEALTH
                 cast( 0 as abap.dec(23,2) ) ) as CollectionValue,
 
       cast( Spacefarer.credits as abap.dec(23,2) ) + coalesce( CollectionValue.CollectionValue,
-          cast( 0 as abap.dec(23,2) ) )       as TotalWealth
+          cast( 0 as abap.dec(23,2) ) )       as TotalWealth,
+
+      _ReadAuthorization
 }

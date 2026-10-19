@@ -1,0 +1,7 @@
+@EndUserText.label: 'Spacefarer Projection Read Authorization'
+@MappingRole: true
+define role ZDS1910_C_SPACEFARER
+{
+  grant select on ZDS1910_C_SPACEFARER
+    where inheriting conditions from entity ZDS1910_I_SPACEFARER;
+}

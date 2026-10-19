@@ -1,0 +1,69 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Stardust Collection',
+  typeNamePlural: 'Stardust Collections',
+  title: { type: #STANDARD, value: 'SpacefarerName' }
+}
+annotate view ZDS1910_C_COLLECTION with
+{
+  @UI.facet: [
+    { id: 'CollectionOverview',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Collection Overview',
+      position: 10 },
+    { id: 'CollectionStardusts',
+      purpose: #STANDARD,
+      type: #LINEITEM_REFERENCE,
+      label: 'Stardusts',
+      position: 20,
+      targetElement: '_Stardust',
+      targetQualifier: 'CollectionItems' }
+  ]
+  @UI.hidden: true
+  SpacefarerId;
+
+  @EndUserText.label: 'Spacefarer'
+  @UI.lineItem: [
+    { position: 10, importance: #HIGH },
+    { position: 40, type: #FOR_ACTION, dataAction: 'Buy',
+      label: '🛒 Buy', invocationGrouping: #ISOLATED },
+    { position: 50, type: #FOR_ACTION, dataAction: 'Sell',
+      label: '💰 Sell', invocationGrouping: #ISOLATED },
+    { position: 60, type: #FOR_ACTION, dataAction: 'Exchange',
+      label: '🔄 Exchange', invocationGrouping: #ISOLATED }
+  ]
+  @UI.identification: [
+    { position: 10 },
+    { position: 40, type: #FOR_ACTION, dataAction: 'Buy',
+      label: '🛒 Buy' },
+    { position: 50, type: #FOR_ACTION, dataAction: 'Sell', label: '💰 Sell' },
+    { position: 60, type: #FOR_ACTION, dataAction: 'Exchange', label: '🔄 Exchange' }
+  ]
+  @UI.selectionField: [{ position: 10 }]
+  SpacefarerName;
+
+  @EndUserText.label: 'Stardust Count'
+  @UI.lineItem: [{ position: 20, importance: #HIGH }]
+  @UI.identification: [{ position: 20 }]
+  @UI.fieldGroup: [{ qualifier: 'CollectionSummary', position: 10 }]
+  StardustCount;
+
+  @EndUserText.label: 'Collection Value (Credits)'
+  @UI.lineItem: [{ position: 30, importance: #HIGH }]
+  @UI.identification: [{ position: 30 }]
+  @UI.fieldGroup: [{ qualifier: 'CollectionSummary', position: 20 }]
+  CollectionValue;
+
+  @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.hidden: true
+  ChangedBy;
+
+  @UI.hidden: true
+  ChangedAt;
+}

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Galactic Adventure Project - Messages</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Spacefarer name is required.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Origin planet is required.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Spacesuit color is required.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Navigation skill must be between 0 and 98.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Reputation must be between 0 and 98.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Navigation skill and reputation together must be less than 99.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Credits must not be negative.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>A non-empty Stardust collection prevents deletion.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>You are not authorized to trade Stardust.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Spacefarer &amp;1 does not exist.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Stardust &amp;1 does not exist.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Trading requires two different Spacefarers.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Stardust does not belong to the specified seller.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Insufficient credits for this trade.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Object &amp;1 is locked by another transaction.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Trade could not be completed: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Reputation must be between 0 and 98.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Stardust value must not be negative.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Trade amount exceeds the supported credit range.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>No Stardust was specified.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZDS1910_MSG_GAP</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Exchange requires two different Stardusts.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

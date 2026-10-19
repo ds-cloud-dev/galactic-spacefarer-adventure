@@ -2,8 +2,10 @@
 @EndUserText.label: 'Galactic Adventure Project - Spacefarer'
 define root view entity ZDS1910_I_SPACEFARER
   as select from zds1910_t_sfarer
-  
+  association [0..1] to ZDS1910_I_USRAUTH    as _ReadAuthorization on  _ReadAuthorization.UserName = $session.user
+                                                                   and _ReadAuthorization.Activity = '03'
   composition [0..1] of ZDS1910_I_COLLECTION as _Collection
+  association [0..*] to ZDS1910_I_STARDUST   as _Stardust          on  $projection.SpacefarerId = _Stardust.CollectionOwnerId
 {
   key spacefarer_id    as SpacefarerId,
       name             as Name,
@@ -21,5 +23,7 @@ define root view entity ZDS1910_I_SPACEFARER
       @Semantics.systemDateTime.localInstanceLastChangedAt: true
       changed_at       as ChangedAt,
 
-      _Collection
+      _ReadAuthorization,
+      _Collection,
+      _Stardust
 }

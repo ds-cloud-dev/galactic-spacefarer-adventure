@@ -1,0 +1,9 @@
+@EndUserText.label: 'Galactic Adventure Project - UI Service'
+define service ZDS1910_UI_GAP {
+  expose ZDS1910_C_SPACEFARER   as Spacefarer;
+  expose ZDS1910_C_COLLECTION   as Collection;
+  expose ZDS1910_C_STARDUST     as Stardust;
+  expose ZDS1910_C_WEALTH       as Wealth;
+  expose ZDS1910_C_SPACEFARERVH as SpacefarerVH;
+  expose ZDS1910_C_STARDUSTVH   as StardustVH;
+}

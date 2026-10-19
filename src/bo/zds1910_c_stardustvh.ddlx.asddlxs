@@ -1,0 +1,31 @@
+@Metadata.layer: #CORE
+annotate entity ZDS1910_C_STARDUSTVH with
+{
+  @UI.hidden: true
+  StardustId;
+
+  @UI.hidden: true
+  CollectionOwnerId;
+
+  @EndUserText.label: 'Collection Owner'
+  @UI.lineItem: [{ position: 10, importance: #HIGH }]
+  CollectionOwnerName;
+
+  @EndUserText.label: 'Color'
+  @UI.lineItem: [{ position: 20, importance: #HIGH }]
+  @UI.selectionField: [{ position: 10 }]
+  Color;
+
+  @EndUserText.label: 'Weight'
+  @UI.lineItem: [{ position: 30, importance: #HIGH }]
+  Weight;
+
+  @EndUserText.label: 'State of Matter'
+  @UI.lineItem: [{ position: 40, importance: #HIGH }]
+  @UI.selectionField: [{ position: 20 }]
+  StateOfMatter;
+
+  @EndUserText.label: 'Value (Credits)'
+  @UI.lineItem: [{ position: 50, importance: #HIGH }]
+  StardustValue;
+}

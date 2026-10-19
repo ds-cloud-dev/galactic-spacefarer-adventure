@@ -1,0 +1,7 @@
+@EndUserText.label: 'Wealth Consumption Read Authorization'
+@MappingRole: true
+define role ZDS1910_C_WEALTH
+{
+  grant select on ZDS1910_C_WEALTH
+    where inheriting conditions from entity ZDS1910_I_WEALTH;
+}

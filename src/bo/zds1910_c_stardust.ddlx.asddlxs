@@ -1,0 +1,77 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Stardust',
+  typeNamePlural: 'Stardusts',
+  title: { type: #STANDARD, value: 'Color' },
+  description: { type: #STANDARD, value: 'StateOfMatter' }
+}
+annotate view ZDS1910_C_STARDUST with
+{
+  @UI.facet: [
+    { id: 'StardustDetails',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Stardust Details',
+      position: 10 }
+  ]
+  @UI.hidden: true
+  StardustId;
+
+  @EndUserText.label: 'Collection Owner'
+  @UI.lineItem: [{ position: 10, importance: #HIGH }]
+  @UI.identification: [{ position: 10 }]
+  @UI.textArrangement: #TEXT_ONLY
+  CollectionOwnerId;
+
+  @UI.hidden: true
+  CollectionOwnerName;
+
+  @EndUserText.label: 'Color'
+  @UI.identification: [{ position: 20 }]
+  @UI.lineItem: [
+    { position: 20, importance: #HIGH },
+    { qualifier: 'CollectionItems', position: 10, importance: #HIGH }
+  ]
+  @UI.selectionField: [{ position: 10 }]
+  Color;
+
+  @EndUserText.label: 'Weight'
+  @UI.identification: [{ position: 30 }]
+  @UI.lineItem: [
+    { position: 30, importance: #HIGH },
+    { qualifier: 'CollectionItems', position: 20, importance: #HIGH }
+  ]
+  Weight;
+
+  @UI.hidden: true
+  WeightUnit;
+
+  @EndUserText.label: 'State of Matter'
+  @UI.identification: [{ position: 40 }]
+  @UI.lineItem: [
+    { position: 40, importance: #HIGH },
+    { qualifier: 'CollectionItems', position: 30, importance: #HIGH }
+  ]
+  @UI.selectionField: [{ position: 20 }]
+  StateOfMatter;
+
+  @EndUserText.label: 'Value (Credits)'
+  @UI.identification: [{ position: 50 }]
+  @UI.lineItem: [
+    { position: 50, importance: #HIGH },
+    { qualifier: 'CollectionItems', position: 40, importance: #HIGH }
+  ]
+  StardustValue;
+
+  @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.hidden: true
+  ChangedBy;
+
+  @UI.hidden: true
+  ChangedAt;
+}

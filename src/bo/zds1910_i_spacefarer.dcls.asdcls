@@ -1,0 +1,7 @@
+@EndUserText.label: 'Spacefarer Read Authorization'
+@MappingRole: true
+define role ZDS1910_I_SPACEFARER
+{
+  grant select on ZDS1910_I_SPACEFARER
+    where _ReadAuthorization.Activity = '03';
+}

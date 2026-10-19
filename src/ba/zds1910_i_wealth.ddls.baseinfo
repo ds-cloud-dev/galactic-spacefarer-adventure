@@ -7,7 +7,9 @@
 "ZDS1910_T_SFARER"
 ],
 "ASSOCIATED":
-[],
+[
+"ZDS1910_I_USRAUTH"
+],
 "BASE":
 [],
 "ANNO_REF":

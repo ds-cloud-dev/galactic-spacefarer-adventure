@@ -6,8 +6,10 @@ CLASS zds1910_cl_demo_data DEFINITION
   PUBLIC SECTION.
 
     INTERFACES if_oo_adt_classrun .
+
   PROTECTED SECTION.
   PRIVATE SECTION.
+
 ENDCLASS.
 
 
@@ -21,6 +23,7 @@ CLASS zds1910_cl_demo_data IMPLEMENTATION.
           lt_spacefarers TYPE STANDARD TABLE OF zds1910_t_sfarer WITH EMPTY KEY,
           lt_collections TYPE STANDARD TABLE OF zds1910_t_scoll WITH EMPTY KEY,
           lt_stardusts   TYPE STANDARD TABLE OF zds1910_t_sdust WITH EMPTY KEY.
+
 
     SELECT SINGLE spacefarer_id
         FROM zds1910_t_sfarer

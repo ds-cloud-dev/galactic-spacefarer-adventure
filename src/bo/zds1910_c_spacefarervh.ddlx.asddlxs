@@ -1,0 +1,16 @@
+@Metadata.layer: #CORE
+annotate entity ZDS1910_C_SPACEFARERVH with
+{
+  @UI.hidden: true
+  SpacefarerId;
+
+  @EndUserText.label: 'Spacefarer'
+  @UI.lineItem: [{ position: 10, importance: #HIGH }]
+  @UI.selectionField: [{ position: 10 }]
+  Name;
+
+  @EndUserText.label: 'Origin Planet'
+  @UI.lineItem: [{ position: 20, importance: #HIGH }]
+  @UI.selectionField: [{ position: 20 }]
+  OriginPlanet;
+}
