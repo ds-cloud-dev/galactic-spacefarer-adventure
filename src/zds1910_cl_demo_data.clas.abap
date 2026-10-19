@@ -95,6 +95,36 @@ CLASS zds1910_cl_demo_data IMPLEMENTATION.
             color       = 'Red'
             weight      = '2.500'
             value       = '30.00' )
+
+          ( stardust_id = cl_system_uuid=>create_uuid_x16_static( )
+            color       = 'Green'
+            weight      = '0.500'
+            value       = '10.00' )
+
+          ( stardust_id = cl_system_uuid=>create_uuid_x16_static( )
+            color       = 'Purple'
+            weight      = '0.750'
+            value       = '40.00' )
+
+          ( stardust_id = cl_system_uuid=>create_uuid_x16_static( )
+            color       = 'Gold'
+            weight      = '1.500'
+            value       = '60.00' )
+
+          ( stardust_id = cl_system_uuid=>create_uuid_x16_static( )
+            color       = 'Silver'
+            weight      = '3.000'
+            value       = '80.00' )
+
+          ( stardust_id = cl_system_uuid=>create_uuid_x16_static( )
+            color       = 'Orange'
+            weight      = '4.000'
+            value       = '120.00' )
+
+          ( stardust_id = cl_system_uuid=>create_uuid_x16_static( )
+            color       = 'White'
+            weight      = '5.000'
+            value       = '200.00' )
         ).
 
         INSERT zds1910_t_sfarer FROM TABLE @lt_spacefarers.
@@ -103,7 +133,7 @@ CLASS zds1910_cl_demo_data IMPLEMENTATION.
 
         COMMIT WORK.
 
-        out->write( 'Created 3 Spacefarers, 2 Collections and 2 Stardusts.' ).
+        out->write( 'Created 3 Spacefarers, 2 Collections and 8 Stardusts.' ).
 
       CATCH cx_root INTO DATA(lx_error).
         ROLLBACK WORK.
