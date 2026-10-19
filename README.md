@@ -1,4 +1,4 @@
-# Galactic Spacefarer Adventure
+# Galactic Spacefarer Adventure 🚀
 
 My solution to the Galactic Spacefarer Adventure exercise, built on SAP BTP ABAP Environment using the ABAP RESTful Application Programming Model (RAP). It includes Spacefarer maintenance, Collection and Wealth views, and Stardust trading through an ABAP API and Fiori Elements actions.
 
